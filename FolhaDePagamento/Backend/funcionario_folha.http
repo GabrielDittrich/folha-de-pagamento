@@ -14,6 +14,21 @@ Content-Type: application/json
 ### Obtenção de todos os funcionários
 GET {{base_url}}/funcionario/listar
 
+### Buscar um funcionário
+GET {{base_url}}/funcionario/buscar/1
+
+### Atualizar um funcionário
+PUT {{base_url}}/funcionario/atualizar/2
+Content-Type: application/json
+
+{
+    "nome": "Novo Nome",
+    "cpf": "Novo Cpf"
+}
+
+### Deletar um funcionalio
+DELETE {{base_url}}/funcionario/deletar/3
+
 # FOLHA ############################################
 
 ### Criação de uma nova folha
@@ -28,8 +43,11 @@ Content-Type: application/json
     "funcionarioId" : 1
 }
 
-### Obtenção de todas as folhas
+### Obtenção de todas as folhas de pagamento
 GET {{base_url}}/folha/listar
 
-### Obtenção de uma folha
+### Obtenção de uma folha de pagamento
 GET {{base_url}}/folha/buscar/12345678912/10/2023
+
+### Deletar folha de pagamento
+DELETE {{base_url}}/folha/deletar/5
